@@ -25,3 +25,6 @@ RUN apt-get -y update \
 
 RUN pip install --upgrade pip
 
+# install poetry
+RUN pip install poetry
+
