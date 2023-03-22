@@ -23,6 +23,6 @@ RUN apt-get -y update \
     && apt-get -y clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade pip
+RUN pip install --upgrade pip \
     && apt-get purge -y --auto-remove gcc
 
