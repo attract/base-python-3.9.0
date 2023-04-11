@@ -26,5 +26,5 @@ RUN apt-get -y update \
 RUN pip install --no-use-pep517 --upgrade pip
 
 # install poetry
-RUN pip install poetry
+RUN pip install poetry==1.3.2
 
