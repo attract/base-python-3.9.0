@@ -20,6 +20,7 @@ RUN apt-get -y update \
         zlib1g zlib1g-dev \
         postgresql-client \
         git \
+        mc \
     && apt-get -y clean \
     && rm -rf /var/lib/apt/lists/*
 
