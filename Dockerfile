@@ -24,7 +24,7 @@ RUN apt-get -y update \
     && apt-get -y clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --no-use-pep517 --upgrade pip
+RUN pip install --upgrade pip
 
 # install poetry
 RUN pip install poetry==1.8.4
