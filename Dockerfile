@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM python:3.12-slim
 ENV \
     PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
@@ -27,5 +27,5 @@ RUN apt-get -y update \
 RUN pip install --no-use-pep517 --upgrade pip
 
 # install poetry
-RUN pip install poetry==1.3.2
+RUN pip install poetry==1.8.4
 
