@@ -24,8 +24,7 @@ RUN apt-get -y update \
     && apt-get -y clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade pip
+RUN pip install --upgrade pip "wheel>=0.46.2"
 
-# install poetry
-RUN pip install poetry==1.8.4
-
+# install poetry (2.x required for CVE-2026-34591 fix)
+RUN pip install poetry==2.3.3
