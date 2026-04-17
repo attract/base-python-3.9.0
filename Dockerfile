@@ -32,7 +32,7 @@ RUN apt-get -y update \
 RUN pip install --upgrade pip "wheel>=0.46.2"
 
 # install poetry (2.x required for CVE-2026-34591 fix)
-RUN pip install poetry==2.3.3
+RUN pip install poetry==2.3.4
 
 # Create non-root user for security
 RUN groupadd -r django_group && useradd -r -g django_group -m -d /home/django_user django_user \
