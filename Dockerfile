@@ -12,7 +12,7 @@ ARG APT_BUST=2026-08-27
 
 # Install all system dependencies in a single layer:
 # Build-time (gcc, *-dev — removed after poetry install in main Dockerfile)
-# Runtime (gettext, postgresql-client, logrotate, libgl1, rsync, etc.)
+# Runtime (gettext, postgresql-client, logrotate, libgl1, etc.)
 RUN echo "apt-bust: ${APT_BUST}" \
     && apt-get -y update \
     && apt-get -y upgrade \
@@ -29,7 +29,6 @@ RUN echo "apt-bust: ${APT_BUST}" \
         logrotate \
         libgl1 \
         util-linux \
-        rsync \
         git \
         mc \
     && apt-get -y clean \
