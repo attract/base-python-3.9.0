@@ -8,7 +8,7 @@ ENV \
 # Cache-bust for the apt layer below. Bump this value (date) before tagging a new
 # base release so Docker Hub build caching cannot reuse a stale `apt upgrade` layer
 # and the image actually picks up the latest Debian security patches.
-ARG APT_BUST=2026-06-19
+ARG APT_BUST=2026-08-27
 
 # Install all system dependencies in a single layer:
 # Build-time (gcc, *-dev — removed after poetry install in main Dockerfile)
