@@ -34,7 +34,7 @@ RUN echo "apt-bust: ${APT_BUST}" \
     && apt-get -y clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade pip "wheel>=0.46.2"
+RUN pip install --upgrade pip "wheel>=0.46.2" "setuptools>=78.1.1"
 
 # install poetry (2.x required for CVE-2026-34591 fix)
 RUN pip install poetry==2.3.4
